@@ -10,7 +10,6 @@ import { routes } from './router';
 const generateMenu = (rawRoute, parentPath) => {
   const tmpPath = parentPath ? `${parentPath}/${rawRoute.path || ""}` : rawRoute.path
   const path = tmpPath.replace(/\/+/g, "/")
-  console.log(path)
   const RouteMenu = <Link to={path} key={path} className='text-black decoration-none'>
     <MenuItem >
       <ListItemText>{rawRoute.title}</ListItemText>
